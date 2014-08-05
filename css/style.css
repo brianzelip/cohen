@@ -3,10 +3,28 @@ layout: nil
 ---
 @charset "UTF-8";
 
+/***************************************************
+ *                                                 *
+ *  Site name:  Ben Cohen                          *
+ *  Site URI:   http://brianzelip.github.io/cohen  *
+ *  Author:     Brian Zelip                        *
+ *  Author URI: http://zelip.me                    *
+ *                                                 *
+ ***************************************************
+
+    TABLE OF CONTENTS
+
+    01. Normalize
+    02. Scaffolding and type
+    03. Grid
+    04. Sections
+
+*/
+
 {% include normalize.bz.css %}
 
 /* Scaffolding and type
- ================================================== */
+   ========================================================================== */
 html {
   font-size: 16px;
 }
@@ -23,6 +41,4 @@ body {
   color: #;
 }
 
-/* Grid
- ================================================== */
 {% include grid.bz.css %}
