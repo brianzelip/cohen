@@ -14,7 +14,7 @@ html {
 body {
   height: 100vh;
   margin: 0;
-  font: 1rem/1.5 'Source Serif Pro', 'Georgia', 'Garamond', 'Noto Serif', 'Times New Roman', serif;
+  font: 1rem/1.5 'Source Serif Pro';
   color: #ecf0f1;
   background-color: #34495e;
   text-rendering: optimizelegibility;
@@ -23,4 +23,16 @@ body {
 * {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
+}
+
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 45em) {
+  .container {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
 }
