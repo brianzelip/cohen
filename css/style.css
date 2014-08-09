@@ -24,6 +24,8 @@ layout: nil
 
 {% include normalize.bz.css %}
 
+{% include fonts.css %}
+
 {% include scaffolding.css %}
 
 {% include grid.bz.css %}
