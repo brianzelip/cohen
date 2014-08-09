@@ -1,0 +1,96 @@
+/* Sections
+   ========================================================================== */
+
+@media (min-width: 45em) {
+  .container {
+    margin-left: 17rem;
+  }
+}
+
+
+/* Header */
+header {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+@media (min-width: 45em) {
+  header {
+    width: 17rem;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    position: fixed;
+    background-color: #aaa;
+  }
+}
+
+.name,
+.bio {
+  color: #fff;
+}
+
+@media (min-width: 45em) {
+  .name,
+  .bio {
+    color: #34495e;
+  }
+}
+
+.name {
+  margin: 2rem 0 0 0;
+  padding: 0 0 1rem 0;
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.bio {
+  margin: 0;
+  padding: 0;
+  font-size: 1.3rem;
+  font-weight: lighter;
+  line-height: 1.5;
+}
+
+/* avatar */
+.avatar {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
+
+/* Nav */
+.nav {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-position: inside;
+  text-align: center;
+}
+@media (min-width: 45em) {
+  .nav {
+    margin-top: 5rem;
+  }
+}
+
+.nav li {
+  display: inline-block;
+  padding: 0 1rem 0 1rem;
+  line-height: 1;
+  font-size: 1.3rem;
+}
+
+.nav li a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+  font-weight: 900;
+}
+
+.nav li a:hover {
+  box-shadow: 0 4px white;
+}
