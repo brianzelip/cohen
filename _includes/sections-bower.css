@@ -26,7 +26,7 @@ header {
 .name {
   margin: 2rem 0 0 0;
   padding: 0 0 1rem 0;
-  font-size: 2.5rem;
+  font-size: 2.7em;
   font-weight: normal;
   line-height: 1;
 }
@@ -84,7 +84,7 @@ header {
 @media (min-width: 45em) {
   .nav {
     margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
   }
 }
 
