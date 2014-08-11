@@ -105,3 +105,117 @@ header {
 
 .nav li a.food:hover {box-shadow: 0 2px #2ecc71;}
 
+
+/* Sequence.js */
+#sequence {
+  position: relative;
+}
+
+.sequence-pagination {
+  margin: 0 0 2rem 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-position: inside;
+  text-align: center;
+}
+
+.sequence-pagination li {
+  display: inline-block;
+  margin: 0 1rem 0 1rem;
+  padding: 0;
+  line-height: 1;
+  font-size: 1.3rem;
+  font-family: 'Source Sans Pro';
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}
+
+.sequence-pagination li.about:hover,
+.sequence-pagination li.about.current {box-shadow: 0 2px #f1c40f;}
+
+.sequence-pagination li.music:hover,
+.sequence-pagination li.music.current {box-shadow: 0 2px #e74c3c;}
+
+.sequence-pagination li.video:hover,
+.sequence-pagination li.video.current {box-shadow: 0 2px #3498db;}
+
+.sequence-pagination li.food:hover,
+.sequence-pagination li.food.current {box-shadow: 0 2px #2ecc71;}
+
+#sequence > .sequence-canvas { /* required */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#sequence > .sequence-canvas > li { /* required */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#sequence > .sequence-canvas li > * {  /* required */
+  position: absolute;
+}
+
+#sequence .panel {
+  height: 100%;
+  width: 100%;
+}
+
+#sequence .panel1 {
+ 
+}
+
+#sequence .panel2 {
+ 
+}
+
+#sequence .panel3 {
+ 
+}
+
+#sequence .panel {
+  opacity: 0;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: "opacity";
+  -moz-transition-property: "opacity";
+  -ms-transition-property: "opacity";
+  -o-transition-property: "opacity";
+  transition-property: "opacity";
+  -webkit-transition-timing-function: linear;
+  -moz-transition-timing-function: linear;
+  -ms-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+
+#sequence .animate-in .panel {
+  opacity: 1;
+}
+
+#sequence .animate-out .panel {
+  opacity: 0;
+}
+
+
+/* Plangular */
+.plangular-track,
+.plangular-artist,
+.plangular-btn {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  font-weight: 900;
+}
+
+.plangular-artist { font-size: 4rem; }
+
+.plangular-track { font-size: 3rem; }
+
+.plangular-btn { font-size: 2rem;}

@@ -18,20 +18,19 @@
     <link rel="canonical" href="">
   </head>
 
-  <body>
+  <body ng-app="plangular">
 
     <header>
       <img class="avatar" src="img/bw-ben-184.jpg" alt="Ben Cohen">
       <h1 class="name">Benjamin Cohen</h1>
-      <h2 class="bio">musician &middot; videographer &middot; chef</h2>
+      <h2 class="bio">Professional musician &amp; videographer</h2>
     </header>
 
-    <nav>
+    <!--<nav>
       <ul class="nav">
         <li><a class="about" href="#about">about</a></li>
         <li><a class="music" href="#music">music</a></li>
         <li><a class="film" href="#film">film</a></li>
-        <li><a class="food" href="#food">food</a></li>
       </ul>
     </nav>
 
@@ -46,7 +45,65 @@
         </div>
       </div>
 
+    </div> -->
+
+    <div class="container">
+
+      <div class="row clearfix">
+        <div class="column four-fifths centered">
+
+          <div id="sequence">
+            <ul class="sequence-pagination">
+              <li class="about">About</li>
+              <li class="music">Music</li>
+              <li class="video">Video</li>
+            </ul>
+            <ul class="sequence-canvas">
+              <li class="animate-in" id="about">
+                <div class="panel panel1">
+                  <h2>About</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi facere eos ipsa expedita, quisquam velit atque saepe odit vitae consequatur impedit corporis perspiciatis libero earum minima dolorum repellendus molestiae nulla.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi facere eos ipsa expedita, quisquam velit atque saepe odit vitae consequatur impedit corporis perspiciatis libero earum minima dolorum repellendus molestiae nulla.</p>
+                </div>
+              </li>
+              <li id="music">
+                <div class="panel panel2">
+                  <h2>Music</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quas, impedit! Cumque quisquam ea, quidem ducimus fuga at, dolorem vero dignissimos, earum enim consequatur? Perspiciatis maiores eos necessitatibus molestias eligendi.</p>
+                  <section plangular data-src="https://soundcloud.com/heavycolor/heavy-color-beat-sampler">
+                    <div style="background-image: url(img/tulips.jpg);">
+                      <img ng-src="{{ track.artwork_url  }}" alt="{{ track.title }}" />
+                      <p class="plangular-artist">{{ track.user.username }}</p>
+                      <p class="plangular-track">{{ track.title }}</p>
+                      <a class="plangular-btn" href="" ng-click="player.play(track)" ng-hide="player.playing == track">Play</a>
+                      <a class="plangular-btn" href="" ng-click="player.pause()" ng-show="player.playing == track">Pause</a><br>
+                      <progress value="{{ currentTime / duration }}" ng-click="seekTo($event)">{{ currentTime / duration }}</progress><br>
+                      <small>{{ currentTime | playTime }} / {{ duration | playTime }}</small>
+                      <a ng-href="{{ track.permalink_url }}">View on SoundCloud</a>
+                  </section>
+                </div>
+              </li>
+              <li id="video">
+                <div class="panel panel3">
+                  <h2>Video</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi facere eos ipsa expedita, quisquam velit atque saepe odit vitae consequatur impedit corporis perspiciatis libero earum minima dolorum repellendus molestiae nulla.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi facere eos ipsa expedita, quisquam velit atque saepe odit vitae consequatur impedit corporis perspiciatis libero earum minima dolorum repellendus molestiae nulla.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div><!-- /column -->
+      </div><!-- /row -->
+
     </div>
+
+    <script src="js/jquery-min.js"></script>
+    <script src="js/jquery.hashchange-min.js"></script>
+    <script src="js/jquery.sequence-min.js"></script>
+    <script src="js/sequencejs-options.basic-crossfade.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
+    <script src="js/plangular.js"></script>
 
   </body>
 
