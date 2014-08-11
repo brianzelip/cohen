@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="css/plang.css">
+    <title></title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
+    <script src="js/plangular.js"></script>
+  </head>
+
+  <body ng-app="plangular">
+
+    <div class="row clearfix">
+      <div class="column one-fifth centered">
+
+        <section plangular data-src="https://soundcloud.com/heavycolor/heavy-color-beat-sampler">
+          <div style="background-image: url(img/tulips.jpg);">
+            <img ng-src="{{ track.artwork_url  }}" alt="{{ track.title }}" />
+            <p>{{ track.user.username }}</p>
+            <p>{{ track.title }}</p>
+            <a href="" ng-click="player.play(track)" ng-hide="player.playing == track">Play</a>
+            <a href="" ng-click="player.pause()" ng-show="player.playing == track">Pause</a><br>
+            <progress value="{{ currentTime / duration }}" ng-click="seekTo($event)">{{ currentTime / duration }}</progress><br>
+            <small>{{ currentTime | playTime }} / {{ duration | playTime }}</small>
+            <a ng-href="{{ track.permalink_url }}">View on SoundCloud</a>
+        </section>
+
+      </div>
+    </div>
+
+  </body>
+
+</html>
