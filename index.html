@@ -101,9 +101,20 @@
     <script src="js/jquery-min.js"></script>
     <script src="js/jquery.hashchange-min.js"></script>
     <script src="js/jquery.sequence-min.js"></script>
-    <script src="js/sequencejs-options.basic-crossfade.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
     <script src="js/plangular.js"></script>
+    <script>
+      $(document).ready(function() {
+          var options = {
+              navigationSkip: false,
+              pagination: true,
+              showPaginationOnInit: false,
+              hashTags: true
+          };
+
+          var sequence = $("#sequence").sequence(options).data("sequence");
+      });
+    </script>
 
   </body>
 
